@@ -58,9 +58,9 @@ export const startServer = async (): Promise<void> => {
   
   try {
     await fastify.listen({ port: PORT, host: '0.0.0.0' });
-    console.log(`🚀 Server is running on port ${PORT}`);
-    console.log(`📝 Environment: ${NODE_ENV}`);
-    console.log(`📚 API available at: http://localhost:${PORT}/api/products`);
+    console.log(`Server is running on port ${PORT}`);
+    console.log(`Environment: ${NODE_ENV}`);
+    console.log(`API available at: http://localhost:${PORT}/api/products`);
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);
